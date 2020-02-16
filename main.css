@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    --bg-color: whitesmoke; /* Стандартный цвет фона */
+    --main-color: black; /* Стандартный цвет текста */
+    --bg-img: url(); /* Стандартный фон */
+    
+    font-family: 'Lato', sans-serif;
+    /* Использование переменных */
+    background: var(--bg-color) var(--bg-img) fixed center no-repeat;
+    color: var(--main-color);
+}
+
+/* Цвета для светлой темы */
+body[theme='light'] {
+    --bg-color: whitesmoke;
+    --main-color: black;
+}
+
+/* Цвета для темной темы */
+body[theme='dark'] {
+    --bg-img: url('./img/dark.jpg');
+    --bg-color: #121212;
+    --main-color: whitesmoke;
+}
+
+/* Цвета для темной темы красного оттенка */
+body[theme='red-dark'] {
+    --bg-color: #221212;
+    --main-color: whitesmoke;
+}
+
+/* Цвета для темной темы синего оттенка */
+body[theme='blue-dark'] {
+    --bg-color: #121222;
+    --main-color: whitesmoke;
+}
+
+button {
+    border: 1px solid #303030;
+    font-size: 16px;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
